@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Yu Ju Chang</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="home">
+        <nav id="nav-wrap">
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+                <li><a class="smoothscroll" href="#about">About</a></li>
+                <li><a class="smoothscroll" href="#resume">Resume</a></li>
+                <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+                <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline" id="header-name">Yu Ju Chang</h1>
+                <h3 id="header-description">I am a Software Engineer...</h3>
+                <hr />
+                <ul class="social" id="header-social">
+                    <!-- Social links will be injected here -->
+                </ul>
+            </div>
+        </div>
+
+        <p class="scrolldown">
+            <a class="smoothscroll" href="#about"><i class="fas fa-chevron-down"></i></a>
+        </p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="row">
+            <div class="three columns">
+                <img class="profile-pic" src="" alt="" id="about-pic" />
+            </div>
+            <div class="nine columns main-col">
+                <h2>About Me</h2>
+                <p id="about-bio">
+                    <!-- Bio goes here -->
+                </p>
+                <div class="row">
+                    <div class="columns contact-details">
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span id="contact-name"></span><br>
+                            <span id="contact-address"></span><br>
+                            <span id="contact-phone"></span><br>
+                            <span id="contact-email"></span>
+                        </p>
+                    </div>
+                    <div class="columns download">
+                        <p>
+                            <a href="#" class="button" id="resume-download"><i class="fa fa-download"></i>Download
+                                Resume</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <!-- Education -->
+        <div class="row education">
+            <div class="three columns header-col">
+                <h1><span>Education</span></h1>
+            </div>
+            <div class="nine columns main-col">
+                <div class="row item">
+                    <div class="twelve columns" id="education-list">
+                        <!-- Education items list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work -->
+        <div class="row work">
+            <div class="three columns header-col">
+                <h1><span>Work</span></h1>
+            </div>
+            <div class="nine columns main-col" id="work-list">
+                <!-- Work items list -->
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="row skill">
+            <div class="three columns header-col">
+                <h1><span>Skills</span></h1>
+            </div>
+            <div class="nine columns main-col">
+                <p>The following are some of my top skills:</p>
+                <div class="bars">
+                    <ul class="skills" id="skills-list">
+                        <!-- Skills list -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="row">
+            <div class="twelve columns collapsed">
+                <h1>Check Out Some of My Works.</h1>
+                <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+                    <!-- Portfolio items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="row section-head">
+            <div class="two columns header-col">
+                <h1><span>Get In Touch.</span></h1>
+            </div>
+            <div class="ten columns">
+                <p class="lead" id="contact-message">
+                    <!-- Contact message -->
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns">
+                <!-- Form or direct contact info can go here -->
+                <div id="message-warning"> </div>
+                <div id="message-success">
+                    <i class="fa fa-check"> </i><br>
+                </div>
+            </div>
+            <aside class="four columns footer-widgets">
+                <div class="widget widget_contact">
+                    <h4>Address and Phone</h4>
+                    <p class="address">
+                        <span id="footer-name"></span><br>
+                        <span id="footer-address"></span><br>
+                        <span id="footer-phone"></span><br>
+                        <span id="footer-email"></span>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="twelve columns">
+                <ul class="social-links" id="footer-social">
+                    <!-- Social links -->
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Copyright 2025</li>
+                    <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i
+                        class="fa fa-chevron-up"></i></a></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./public/data.js"></script>
+    <script src="./public/app.js"></script>
+
+</body>
+
+</html>
