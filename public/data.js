@@ -8,7 +8,7 @@ const resumeData = {
     "name": "Yu Ju Chang",
     "occupation": "Cytogenetic Scientist, Full-Stack Developer",
     "description": "I am a cytogenetic scientist, Full-Stack Developer, and Cybersecurity Enthusiast. Passionate about making a difference with my work!",
-    "image": "../assets/images/profile.jpg",
+    "image": "assets/images/profile.jpg",
     "bio": "I am an experienced highly analytical professional with 16 years of experience in cytogenetics, driven by a passion for complex problem-solving and continuous learning. Holds a Master's degree in Cybersecurity and Information Assurance and a background in Computer Science. I excel at embracing technical challenges and actively advancing my programming skills to pivot into a high-impact role in the technology sector. My curiosity for the unknown (UAPs/spirituality) complements my analytical rigor, fueling my dedication to finding innovative solutions.",
     "contactmessage": "Let's Connect! I am always open to discussing new challenges, potential collaborations, or opportunities in the technology space. If you're looking for a dedicated and analytical professional with a unique blend of technical expertise and problem-solving drive, please feel free to connect with me!I look forward to hearing from you.",
     "email": "yuju.chang86@gmail.com",
@@ -113,22 +113,22 @@ const resumeData = {
   "portfolio": {
     "projects": [
       {
-        "title": "Project One",
-        "category": "My Resume",
-        "image": "", 
-        "url": ""
+        "title": "Secure-workflow",
+        "category": "A robust, secure backend service for managing business workflows, built with Node.js, Express, and MySQL. This project demonstrates security best practices including JWT authentication, role-based access control (RBAC), and request validation",
+        "image": "assets/images/secure-workflow.png", 
+        "url": "https://github.com/changyuj/secure-workflow"
       },
       {
-        "title": "Project Two",
-        "category": "",
-        "image": "",
-        "url": ""
+        "title": "My Resume",
+        "category": "A professional, responsive resume website built with HTML, CSS, and JavaScript, featuring dynamic content loading and a sleek, modern design.",
+        "image": "assets/images/resume-project.png",
+        "url": "https://github.com/changyuj/Resume"
       },
       {
-        "title": "Project Three",
-        "category": "",
-        "image": "",
-        "url": ""
+        "title": "stickynotes app",
+        "category": "A simple and vibrant Android application for managing tasks and ideas with digital sticky notes. Built with Kotlin and modern Android development practices.",
+        "image": "assets/images/stickynote-app.png",
+        "url": "https://github.com/changyuj/stickynote"
       }
     ]
   }

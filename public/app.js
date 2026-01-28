@@ -98,8 +98,8 @@ function loadData() {
         portfolioWrapper.innerHTML = portfolio.projects.map(project => `
             <div class="columns portfolio-item">
                 <div class="item-wrap">
+                    <div class="project-bg" style="background-image: url('${project.image || 'assets/images/secure-workflow.png'}');"></div>
                     <a href="${project.url}" title="${project.title}">
-                        <img alt="${project.title}" src="${project.image}">
                         <div class="overlay">
                             <div class="portfolio-item-meta">
                                 <h5>${project.title}</h5>
