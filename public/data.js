@@ -129,6 +129,12 @@ const resumeData = {
         "category": "A simple and vibrant Android application for managing tasks and ideas with digital sticky notes. Built with Kotlin and modern Android development practices.",
         "image": "assets/images/stickynote-app.png",
         "url": "https://github.com/changyuj/stickynote"
+      },
+      {
+        "title": "Resume tailor",
+        "category": "An AI-powered application designed to help job seekers optimize their resume for specific job descriptions. It analyzes the gap between your resume and job posting, suggests improvements, and generates a tailored resume in PDF or DOCX format.",
+        "image": "assets/images/resume-tailor.png",
+        "url": "https://github.com/changyuj/resume-tailor"
       }
     ]
   }

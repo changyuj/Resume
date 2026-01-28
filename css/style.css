@@ -385,15 +385,20 @@ ul.social li a:hover { color: #11ABB0; }
     margin-bottom: 48px;
     color: #95A3A3;
 }
-#portfolio-wrapper { margin-bottom: 36px; }
+#portfolio-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px; 
+}
 .portfolio-item {
-    float: left;
     margin: 0 0 40px 0;
-    width: 33.333%; /* s-bgrid-thirds */
+    width: 25%; /* 4 items in one row */
     padding: 0 20px;
     box-sizing: border-box;
+    display: flex;
 }
 .item-wrap {
+    width: 100%;
     background: #000;
     overflow: hidden;
     position: relative;
