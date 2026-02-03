@@ -135,6 +135,12 @@ const resumeData = {
         "category": "An AI-powered application designed to help job seekers optimize their resume for specific job descriptions. It analyzes the gap between your resume and job posting, suggests improvements, and generates a tailored resume in PDF or DOCX format.",
         "image": "assets/images/resume-tailor.png",
         "url": "https://github.com/changyuj/resume-tailor"
+      },
+      {
+        "title": "ISCN Translator",
+        "category": "A powerful, modern web application designed to translate complex International System for Human Cytogenetic Nomenclature (ISCN) strings into plain, easy-to-understand English.",
+        "image": "assets/images/ISCN.PNG",
+        "url": "https://github.com/changyuj/iscn-translator"
       }
     ]
   }

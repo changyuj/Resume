@@ -98,15 +98,14 @@ function loadData() {
         portfolioWrapper.innerHTML = portfolio.projects.map(project => `
             <div class="columns portfolio-item">
                 <div class="item-wrap">
-                    <div class="project-bg" style="background-image: url('${project.image || 'assets/images/secure-workflow.png'}');"></div>
-                    <a href="${project.url}" title="${project.title}">
-                        <div class="overlay">
-                            <div class="portfolio-item-meta">
-                                <h5>${project.title}</h5>
-                                <p>${project.category}</p>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="project-image" style="background-image: url('${project.image || 'assets/images/secure-workflow.png'}');"></div>
+                    <div class="card-content">
+                        <h5>${project.title}</h5>
+                        <p class="project-category">${project.category}</p>
+                        <a href="${project.url}" class="github-button" target="_blank">
+                            <i class="fa fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         `).join('');
