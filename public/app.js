@@ -4,16 +4,47 @@
 
 const App = {
     init: function() {
-        console.log("Bento Grid Initialized");
+        this.renderHero();
         this.renderTech();
         this.renderProjects();
+        this.renderContact();
+        this.renderSocials();
+    },
+
+    renderHero: function() {
+        if (typeof resumeData === 'undefined') return;
+        const main = resumeData.main;
+        
+        const vibe = document.getElementById('bento-vibe');
+        if (vibe) vibe.innerHTML = main.bio;
+
+        const name = document.getElementById('bento-name');
+        if (name) name.innerHTML = main.name;
+
+        const title = document.querySelector('.hero-title');
+        if (title) title.innerHTML = main.title;
+    },
+
+    renderContact: function() {
+        if (typeof resumeData === 'undefined') return;
+        const main = resumeData.main;
+
+        const email = document.getElementById('bento-email');
+        if (email) {
+            email.href = `mailto:${main.email}`;
+            email.innerHTML = main.email;
+        }
+
+        const phone = document.getElementById('bento-phone');
+        if (phone) phone.innerHTML = main.phone;
     },
 
     renderTech: function() {
         const container = document.getElementById('bento-tech');
         if (!container || typeof resumeData === 'undefined') return;
         
-        container.innerHTML = resumeData.resume.skills.map(skill => `
+        // Slice to top 4 skills to save vertical space
+        container.innerHTML = resumeData.resume.skills.slice(0, 4).map(skill => `
             <div class="skill-item">
                 <div class="skill-info">
                     <span>${skill.name}</span>
@@ -38,6 +69,20 @@ const App = {
                     <span class="btn-link">View GitHub</span>
                 </div>
             </div>
+        `).join('');
+    },
+
+    renderSocials: function() {
+        const container = document.getElementById('bento-socials');
+        if (!container || typeof resumeData === 'undefined') return;
+
+        const social = resumeData.main.social;
+        container.innerHTML = social.map(item => `
+            <li>
+                <a href="${item.url.startsWith('http') ? item.url : 'https://' + item.url}" target="_blank" title="${item.name}">
+                    <i class="${item.className}"></i>
+                </a>
+            </li>
         `).join('');
     }
 };

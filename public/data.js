@@ -5,39 +5,15 @@
 
 const resumeData = {
   "main": {
-    "name": "Yu Ju Chang.",
-    "title": "Cytogenetic Scientist, Full-Stack Developer",
-    "description": "I am a cytogenetic scientist, Full-Stack Developer, and Cybersecurity Enthusiast. Passionate about making a difference with my work!",
+    "name": "Yu Ju Chang",
+    "title": "Cytogenetic Scientist | Software Developer | B.S. Computer Science",
     "image": "assets/images/profile.jpg",
     "bio": "Hi, I’m Yu Ju Chang. I have a unique background—I’ve spent over 10 years at MD Anderson bridging the gap between clinical science and IT. I have a B.S. in Computer Science and I’m finishing my Master’s in Cybersecurity. I’m looking for a role where I can combine my technical skills with my experience working in high-compliance, mission-critical environments.",
-    "contactmessage": "Let's Connect! I am always open to discussing new challenges, potential collaborations, or opportunities in the technology space. If you're looking for a dedicated and analytical professional with a unique blend of technical expertise and problem-solving drive, please feel free to connect with me!I look forward to hearing from you.",
     "email": "yuju.chang86@gmail.com",
     "phone": "832-931-9168",
-    "address": {
-      "city": "Houston",
-      "state": "Texas",
-      "zip": "77051"
-    },
     "website": "",
     "resumedownload": "./assets/resume/yu_ju_chang.pdf",
     "social": [
-      /*
-      {
-        "name": "facebook",
-        "url": "",
-        "className": "fa fa-facebook"
-      },
-      {
-        "name": "twitter",
-        "url": "",
-        "className": "fa fa-twitter"
-      },
-      {
-        "name": "instagram",
-        "url": "",
-        "className": "fa fa-instagram"
-      },
-      */
       {
         "name": "linkedin",
         "url": "www.linkedin.com/in/yu-ju-chang-13812b1a6",
