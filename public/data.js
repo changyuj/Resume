@@ -5,11 +5,11 @@
 
 const resumeData = {
   "main": {
-    "name": "I am Yu Ju Chang.",
-    "occupation": "Cytogenetic Scientist, Full-Stack Developer",
+    "name": "Yu Ju Chang.",
+    "title": "Cytogenetic Scientist, Full-Stack Developer",
     "description": "I am a cytogenetic scientist, Full-Stack Developer, and Cybersecurity Enthusiast. Passionate about making a difference with my work!",
     "image": "assets/images/profile.jpg",
-    "bio": "I am an experienced highly analytical professional with 16 years of experience in cytogenetics, driven by a passion for complex problem-solving and continuous learning. Holds a Master's degree in Cybersecurity and Information Assurance and a background in Computer Science. I excel at embracing technical challenges and actively advancing my programming skills to pivot into a high-impact role in the technology sector. My curiosity for the unknown (UAPs/spirituality) complements my analytical rigor, fueling my dedication to finding innovative solutions.",
+    "bio": "Hi, I’m Yu Ju Chang. I have a unique background—I’ve spent over 10 years at MD Anderson bridging the gap between clinical science and IT. I have a B.S. in Computer Science and I’m finishing my Master’s in Cybersecurity. I’m looking for a role where I can combine my technical skills with my experience working in high-compliance, mission-critical environments.",
     "contactmessage": "Let's Connect! I am always open to discussing new challenges, potential collaborations, or opportunities in the technology space. If you're looking for a dedicated and analytical professional with a unique blend of technical expertise and problem-solving drive, please feel free to connect with me!I look forward to hearing from you.",
     "email": "yuju.chang86@gmail.com",
     "phone": "832-931-9168",

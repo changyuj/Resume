@@ -20,190 +20,92 @@
 </head>
 
 <body>
+    <main id="bento-grid">
+        <!-- Hero Card (2x2) -->
+        <section id="card-hero" class="bento-card hero-span">
+            <div class="hero-header">
+                <img id="bento-profile" src="./assets/images/profile.jpg" alt="Yu Ju Chang" class="profile-img">
+                <h1 id="bento-name">Yu Ju Chang</h1>
+            </div>
+            <div class="card-content">
+                <p id="bento-vibe" class="vibe-text">I am an experienced highly analytical professional with 16 years of experience in cytogenetics, driven by a passion for complex problem-solving and continuous learning. Holds a Master's degree in Cybersecurity and Information Assurance and a background in Computer Science. I excel at embracing technical challenges and actively advancing my programming skills to pivot into a high-impact role in the technology sector. My curiosity for the unknown (UAPs/spirituality) complements my analytical rigor, fueling my dedication to finding innovative solutions.</p>
+                <div class="cta-group">
+                    <a href="mailto:yuju.chang86@gmail.com" class="btn-primary">Connect</a>
+                    <a href="./assets/resume/yu_ju_chang.pdf" class="btn-secondary" target="_blank">Resume</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Header -->
-    <header id="home">
-        <nav id="nav-wrap">
-            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        <!-- Tech Stack Card (1x2) -->
+        <section id="card-tech" class="bento-card">
+            <h2 class="card-label">Expertise</h2>
+            <div class="skill-list" id="bento-tech">
+                <!-- Skills injected by JS -->
+            </div>
+        </section>
 
-            <ul id="nav" class="nav">
-                <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-                <li><a class="smoothscroll" href="#about">About</a></li>
-                <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-                <li><a class="smoothscroll" href="#resume">Resume</a></li>
-                <li><a class="smoothscroll" href="#contact">Contact</a></li>
+        <!-- Projects Card (2x1) -->
+        <section id="card-project" class="bento-card project-span">
+            <h2 class="card-label">Portfolio</h2>
+            <div id="projects-container" class="projects-grid">
+                <!-- Projects injected by JS -->
+            </div>
+        </section>
+
+        <!-- Experience Card (1x2) -->
+        <section id="card-experience" class="bento-card timeline-span">
+            <h2 class="card-label">Journey</h2>
+            <div class="timeline" id="bento-experience">
+                <div class="timeline-item active" onclick="this.classList.toggle('expanded')">
+                    <span class="date">2009 - Present</span>
+                    <h4>Senior Cytogeneticist</h4>
+                    <b class="company">MD Anderson Cancer Center</b>
+                    <div class="details">
+                        Worked as a senior cytogeneticist at MD Anderson Cancer Center.
+                    </div>
+                </div>
+            </div>
+            <div class="cert-footer" id="bento-certs">
+                <a href="./assets/certificates/CompTIA CySA+ ce certificate.pdf" target="_blank" class="cert-badge">
+                    <i class="fa fa-certificate"></i> CySA+
+                </a>
+                <a href="./assets/certificates/CompTIA Network+ ce certificate.pdf" target="_blank" class="cert-badge">
+                    <i class="fa fa-certificate"></i> Network+
+                </a>
+                <a href="./assets/certificates/CompTIA PenTest+ ce certificate.pdf" target="_blank" class="cert-badge">
+                    <i class="fa fa-certificate"></i> PenTest+
+                </a>
+                <a href="./assets/certificates/CompTIA Security+ ce certificate.pdf" target="_blank" class="cert-badge">
+                    <i class="fa fa-certificate"></i> Security+
+                </a>
+                <a href="./assets/certificates/ISC2.pdf" target="_blank" class="cert-badge">
+                    <i class="fa fa-certificate"></i> ISC2
+                </a>
+            </div>
+        </section>
+
+        <!-- Social Card (1x1) -->
+        <section id="card-social" class="bento-card">
+            <h2 class="card-label">Socials</h2>
+            <ul id="bento-socials" class="social-list">
+                <li><a href="www.linkedin.com/in/yu-ju-chang-13812b1a6" target="_blank" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/changyuj" target="_blank" title="github"><i class="fa fa-github"></i></a></li>
             </ul>
-        </nav>
+        </section>
 
-        <div class="row banner">
-            <div class="banner-text">
-                <ul class="social" id="header-social">
-                    <!-- Social links will be injected here -->
-                </ul>
-                <h1 class="responsive-headline" id="header-name">Yu Ju Chang</h1>
-                <h3 id="header-description">I am a Software Engineer...</h3>
-                <hr />
-                <p class="scrolldown">
-                    <a class="smoothscroll" href="#about">SCROLL DOWN <i class="fa fa-chevron-down"></i></a>
-                </p>
+        <!-- Contact/Vibe Card (1x1) -->
+        <section id="card-contact" class="bento-card">
+            <h2 class="card-label">Contact</h2>
+            <div id="bento-contact-details">
+                <a href="mailto:yuju.chang86@gmail.com" id="bento-email">Email Me</a>
+                <p id="bento-phone" class="phone-num">832-931-9168</p>
             </div>
-        </div>
-
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="row">
-            <div class="three columns">
-                <img class="profile-pic" src="" alt="" id="about-pic" />
-            </div>
-            <div class="nine columns main-col">
-                <h2>About Me</h2>
-                <p id="about-bio">
-                    <!-- Bio goes here -->
-                </p>
-                <div class="row">
-                    <div class="columns contact-details">
-                        <h2>Contact Details</h2>
-                        <p class="address">
-                            <span id="contact-name"></span><br>
-                            <span id="contact-address"></span><br>
-                            <span id="contact-phone"></span><br>
-                            <span id="contact-email"></span>
-                        </p>
-                    </div>
-                    <div class="columns download">
-                        <p>
-                            <a href="#" class="button" id="resume-download"><i class="fa fa-download"></i>Download
-                                Resume</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="row">
-            <div class="twelve columns collapsed">
-                <h1>Check Out Some of My Works.</h1>
-                <div class="portfolio-carousel-wrapper">
-                    <div class="portfolio-nav">
-                        <button class="prev" id="portfolio-prev"><i class="fa fa-chevron-left"></i></button>
-                        <button class="next" id="portfolio-next"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                    <div class="portfolio-carousel-container">
-                        <div id="portfolio-wrapper" class="cf">
-                            <!-- Portfolio items -->
-                        </div>
-                    </div>
-                    <div id="portfolio-dots" class="portfolio-dots"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-        <!-- Education -->
-        <div class="row education">
-            <div class="three columns header-col">
-                <h1><span>Education</span></h1>
-            </div>
-            <div class="nine columns main-col">
-                <div class="row item">
-                    <div class="twelve columns" id="education-list">
-                        <!-- Education items list -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Work -->
-        <div class="row work">
-            <div class="three columns header-col">
-                <h1><span>Work</span></h1>
-            </div>
-            <div class="nine columns main-col" id="work-list">
-                <!-- Work items list -->
-            </div>
-        </div>
-
-        <!-- Skills -->
-        <div class="row skill">
-            <div class="three columns header-col">
-                <h1><span>Skills</span></h1>
-            </div>
-            <div class="nine columns main-col">
-                <p>The following are some of my top skills:</p>
-                <div class="bars">
-                    <ul class="skills" id="skills-list">
-                        <!-- Skills list -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="row section-head">
-            <div class="two columns header-col">
-                <h1><span>Get In Touch.</span></h1>
-            </div>
-            <div class="ten columns">
-                <p class="lead" id="contact-message">
-                    <!-- Contact message -->
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="eight columns">
-                <!-- Form or direct contact info can go here -->
-                <div id="message-warning"> </div>
-                <div id="message-success">
-                    <i class="fa fa-check"> </i><br>
-                </div>
-            </div>
-            <aside class="four columns footer-widgets">
-                <div class="widget widget_contact">
-                    <h4>Address and Phone</h4>
-                    <p class="address">
-                        <span id="footer-name"></span><br>
-                        <span id="footer-address"></span><br>
-                        <span id="footer-phone"></span><br>
-                        <span id="footer-email"></span>
-                    </p>
-                </div>
-            </aside>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="twelve columns">
-                <ul class="social-links" id="footer-social">
-                    <!-- Social links -->
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Copyright 2025</li>
-                    <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i
-                        class="fa fa-chevron-up"></i></a></div>
-        </div>
-    </footer>
-    
+        </section>
+    </main>
 
     <!-- Scripts -->
     <script src="./public/data.js"></script>
     <script src="./public/app.js"></script>
-
 </body>
 
 </html>
