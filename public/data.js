@@ -19,8 +19,9 @@ const resumeData = {
       "zip": "77051"
     },
     "website": "",
-    "resumedownload": "",
+    "resumedownload": "./assets/resume/yu_ju_chang.pdf",
     "social": [
+      /*
       {
         "name": "facebook",
         "url": "",
@@ -32,14 +33,15 @@ const resumeData = {
         "className": "fa fa-twitter"
       },
       {
-        "name": "linkedin",
-        "url": "www.linkedin.com/in/yu-ju-chang-13812b1a6",
-        "className": "fa fa-linkedin"
-      },
-      {
         "name": "instagram",
         "url": "",
         "className": "fa fa-instagram"
+      },
+      */
+      {
+        "name": "linkedin",
+        "url": "www.linkedin.com/in/yu-ju-chang-13812b1a6",
+        "className": "fa fa-linkedin"
       },
       {
         "name": "github",
@@ -113,6 +115,18 @@ const resumeData = {
   "portfolio": {
     "projects": [
       {
+        "title": "AML Survival Analysis using Machine Learning",
+        "category": "This project investigates how biological age and lifestyle-driven risk factors influence the survival rates of patients with Acute Myeloid Leukemia (AML). By merging clinical data from cBioPortal (TCGA) with lifestyle proxies derived from NHANES, the model provides a holistic view of patient prognosis beyond traditional clinical markers",
+        "image": "assets/images/survival_comparison_plot.PNG",
+        "url": "https://github.com/changyuj/AML_Survival_Analysis_using-Machine_Learning"
+      },
+      {
+        "title": "ISCN Translator",
+        "category": "A powerful, modern web application designed to translate complex International System for Human Cytogenetic Nomenclature (ISCN) strings into plain, easy-to-understand English.",
+        "image": "assets/images/ISCN.PNG",
+        "url": "https://github.com/changyuj/iscn-translator"
+      },
+      {
         "title": "Secure-workflow",
         "category": "A robust, secure backend service for managing business workflows, built with Node.js, Express, and MySQL. This project demonstrates security best practices including JWT authentication, role-based access control (RBAC), and request validation",
         "image": "assets/images/secure-workflow.png", 
@@ -135,18 +149,6 @@ const resumeData = {
         "category": "An AI-powered application designed to help job seekers optimize their resume for specific job descriptions. It analyzes the gap between your resume and job posting, suggests improvements, and generates a tailored resume in PDF or DOCX format.",
         "image": "assets/images/resume-tailor.png",
         "url": "https://github.com/changyuj/resume-tailor"
-      },
-      {
-        "title": "ISCN Translator",
-        "category": "A powerful, modern web application designed to translate complex International System for Human Cytogenetic Nomenclature (ISCN) strings into plain, easy-to-understand English.",
-        "image": "assets/images/ISCN.PNG",
-        "url": "https://github.com/changyuj/iscn-translator"
-      },
-      {
-        "title": "AML Survival Analysis using Machine Learning",
-        "category": "This project investigates how biological age and lifestyle-driven risk factors influence the survival rates of patients with Acute Myeloid Leukemia (AML). By merging clinical data from cBioPortal (TCGA) with lifestyle proxies derived from NHANES, the model provides a holistic view of patient prognosis beyond traditional clinical markers",
-        "image": "assets/images/survival_comparison_plot.PNG",
-        "url": "https://github.com/changyuj/AML_Survival_Analysis_using-Machine_Learning"
       }
     ]
   }
