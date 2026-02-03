@@ -41,4 +41,3 @@ Resume/
 
 ---
 
-_Design inspired by Styleshout._

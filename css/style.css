@@ -29,10 +29,11 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
     line-height: 1.6;
-    padding: 40px 20px;
+    padding: 60px 20px 40px; /* More top padding */
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stacked vertically */
+    justify-content: flex-start; /* Start from top */
     align-items: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -572,4 +573,15 @@ body {
     }
     .hero-span, .project-span, .timeline-span { grid-column: span 1; grid-row: span 1; }
     #card-hero h1 { font-size: 32px; }
+}
+#bento-footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+#bento-footer p {
+    opacity: 0.6;
 }

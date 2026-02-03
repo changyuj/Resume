@@ -9,6 +9,12 @@ const App = {
         this.renderProjects();
         this.renderContact();
         this.renderSocials();
+        this.setCopyrightYear();
+    },
+
+    setCopyrightYear: function() {
+        const yearEl = document.getElementById('copyright-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
     },
 
     renderHero: function() {
