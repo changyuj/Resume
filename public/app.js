@@ -126,8 +126,59 @@ function loadData() {
         }
 
         const allItems = portfolioWrapper.querySelectorAll('.portfolio-item');
+        const dotsContainer = document.getElementById('portfolio-dots');
         let currentIndex = clonesToCreate; // Start at the first "real" item
         let isTransitioning = false;
+        let autoScrollInterval;
+        let resumeTimeout;
+
+        function startAutoScroll() {
+            stopAutoScroll(); // Clear any existing
+            autoScrollInterval = setInterval(() => {
+                nextBtn.click();
+            }, 5000); // Scroll every 5 seconds
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+            clearTimeout(resumeTimeout);
+        }
+
+        function handleManualInteraction() {
+            stopAutoScroll();
+            resumeTimeout = setTimeout(startAutoScroll, 5000); // Resume after 5 seconds of inactivity
+        }
+
+        // Create dots
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalRealItems; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    if (isTransitioning) return;
+                    handleManualInteraction();
+                    currentIndex = i + clonesToCreate;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateDots() {
+            if (!dotsContainer) return;
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Calculate active index relative to real items
+            let activeIndex = (currentIndex - clonesToCreate) % totalRealItems;
+            if (activeIndex < 0) activeIndex = totalRealItems + activeIndex;
+            
+            if (dots[activeIndex]) {
+                dots[activeIndex].classList.add('active');
+            }
+        }
 
         function updateCarousel(instant = false) {
             const itemWidth = allItems[0].offsetWidth;
@@ -140,6 +191,7 @@ function loadData() {
             }
             
             portfolioWrapper.style.transform = `translateX(${offset}px)`;
+            updateDots();
         }
 
         function handleJump() {
@@ -159,8 +211,9 @@ function loadData() {
         const nextBtn = document.getElementById('portfolio-next');
 
         if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
+            prevBtn.addEventListener('click', (e) => {
                 if (isTransitioning) return;
+                if (e.isTrusted) handleManualInteraction(); // Only reset if user clicked
                 isTransitioning = true;
                 currentIndex--;
                 updateCarousel();
@@ -168,8 +221,9 @@ function loadData() {
         }
 
         if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
+            nextBtn.addEventListener('click', (e) => {
                 if (isTransitioning) return;
+                if (e.isTrusted) handleManualInteraction(); // Only reset if user clicked
                 isTransitioning = true;
                 currentIndex++;
                 updateCarousel();
@@ -177,7 +231,10 @@ function loadData() {
         }
 
         // Initialize and handle resize
-        setTimeout(() => updateCarousel(true), 100); // Small delay to ensure layout is ready
+        setTimeout(() => {
+            updateCarousel(true);
+            startAutoScroll();
+        }, 100); 
         window.addEventListener('resize', () => updateCarousel(true));
     }
 
