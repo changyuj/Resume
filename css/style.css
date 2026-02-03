@@ -384,7 +384,7 @@ ul.social li a:hover { color: #11ABB0; }
 /*	6. Portfolio Section
 /* ------------------------------------------------------------------ */
 #portfolio {
-    background: #373838;
+    background: #272020;
     padding-top: 90px;
     padding-bottom: 90px;
 }
@@ -398,14 +398,60 @@ ul.social li a:hover { color: #11ABB0; }
 }
 #portfolio-wrapper { 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 100%;
+}
+.portfolio-carousel-wrapper {
+    position: relative;
+    padding: 0 50px; /* Space for arrows */
+}
+.portfolio-carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+.portfolio-nav {
+    position: absolute;
+    top: 50%;
+    left: -60px; /* Offset left */
+    right: -60px; /* Offset right */
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.portfolio-nav button {
+    background: rgba(17, 171, 176, 0.8);
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 0 -15px; 
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.portfolio-nav button:hover {
+    background: #11ABB0;
+    transform: scale(1.1);
+}
+.portfolio-nav button:disabled {
+    background: rgba(100, 100, 100, 0.5);
+    cursor: not-allowed;
+    transform: none;
 }
 .portfolio-item {
     padding: 0 15px;
     margin-bottom: 30px;
-    width: 33.33%; /* 3 items in one row */
+    flex: 0 0 33.333%; /* 3 items in one row, no shrinking or growing */
     box-sizing: border-box;
 }
 
@@ -417,7 +463,7 @@ ul.social li a:hover { color: #11ABB0; }
 }
 
 .item-wrap {
-    background: #FFFFFF;
+    background: #323131;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -438,12 +484,44 @@ ul.social li a:hover { color: #11ABB0; }
 }
 .card-content {
     padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
-.portfolio-item-meta p {
-    font: 14px/22px 'Open Sans', sans-serif;
-    color: #44ffff;
-    font-weight: 600;
-    margin-bottom: 0;
+.card-content h5 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.project-category {
+    font: 14px/1.6 'Open Sans', sans-serif;
+    color: #d4d2d2;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+.github-button {
+    display: block;
+    background: transparent;
+    color: #11ABB0 !important;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #11ABB0;
+    margin-top: auto;
+}
+.github-button:hover {
+    background: #11ABB0;
+    color: #FFFFFF !important;
+}
+.github-button i {
+    margin-right: 8px;
 }
 
 /* ------------------------------------------------------------------ */

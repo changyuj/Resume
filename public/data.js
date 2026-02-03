@@ -141,6 +141,12 @@ const resumeData = {
         "category": "A powerful, modern web application designed to translate complex International System for Human Cytogenetic Nomenclature (ISCN) strings into plain, easy-to-understand English.",
         "image": "assets/images/ISCN.PNG",
         "url": "https://github.com/changyuj/iscn-translator"
+      },
+      {
+        "title": "AML Survival Analysis using Machine Learning",
+        "category": "This project investigates how biological age and lifestyle-driven risk factors influence the survival rates of patients with Acute Myeloid Leukemia (AML). By merging clinical data from cBioPortal (TCGA) with lifestyle proxies derived from NHANES, the model provides a holistic view of patient prognosis beyond traditional clinical markers",
+        "image": "assets/images/survival_comparison_plot.PNG",
+        "url": "https://github.com/changyuj/AML_Survival_Analysis_using-Machine_Learning"
       }
     ]
   }

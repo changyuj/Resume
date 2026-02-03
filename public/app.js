@@ -109,6 +109,76 @@ function loadData() {
                 </div>
             </div>
         `).join('');
+
+        // Seamless Carousel Logic
+        const items = Array.from(portfolioWrapper.querySelectorAll('.portfolio-item'));
+        const totalRealItems = items.length;
+        if (totalRealItems === 0) return;
+
+        // Clone items for seamless effect
+        // We'll clone enough to fill the view at both ends
+        const clonesToCreate = 3; 
+        for (let i = 0; i < clonesToCreate; i++) {
+            const firstClone = items[i].cloneNode(true);
+            const lastClone = items[totalRealItems - 1 - i].cloneNode(true);
+            portfolioWrapper.appendChild(firstClone);
+            portfolioWrapper.insertBefore(lastClone, portfolioWrapper.firstChild);
+        }
+
+        const allItems = portfolioWrapper.querySelectorAll('.portfolio-item');
+        let currentIndex = clonesToCreate; // Start at the first "real" item
+        let isTransitioning = false;
+
+        function updateCarousel(instant = false) {
+            const itemWidth = allItems[0].offsetWidth;
+            const offset = -currentIndex * itemWidth;
+            
+            if (instant) {
+                portfolioWrapper.style.transition = 'none';
+            } else {
+                portfolioWrapper.style.transition = 'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)';
+            }
+            
+            portfolioWrapper.style.transform = `translateX(${offset}px)`;
+        }
+
+        function handleJump() {
+            isTransitioning = false;
+            if (currentIndex <= clonesToCreate - 1) {
+                currentIndex = totalRealItems + currentIndex;
+                updateCarousel(true);
+            } else if (currentIndex >= totalRealItems + clonesToCreate) {
+                currentIndex = currentIndex - totalRealItems;
+                updateCarousel(true);
+            }
+        }
+
+        portfolioWrapper.addEventListener('transitionend', handleJump);
+
+        const prevBtn = document.getElementById('portfolio-prev');
+        const nextBtn = document.getElementById('portfolio-next');
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex--;
+                updateCarousel();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex++;
+                updateCarousel();
+            });
+        }
+
+        // Initialize and handle resize
+        setTimeout(() => updateCarousel(true), 100); // Small delay to ensure layout is ready
+        window.addEventListener('resize', () => updateCarousel(true));
     }
 
     /* ------------------------------------------------------------------ */
