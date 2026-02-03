@@ -126,7 +126,7 @@ header {
     background: #161415 url('../assets/images/bg.jpg') no-repeat center center;
     background-size: cover !important;
 	background-attachment: fixed;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
 }
 header:before {
@@ -185,11 +185,11 @@ header:before {
     margin: 0 auto;
     width: 85%;
     padding-bottom: 30px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 10%; /* Move to the left */
+    transform: translateY(-50%); /* Only translate Y */
 }
 .banner-text { width: 100%; }
 .banner h1 {
@@ -199,36 +199,42 @@ header:before {
     line-height: 1em;
     font-weight: 700;
     letter-spacing: -2px;
-    margin: 0 auto 18px auto;
+    margin: 0 0 18px 0;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 .banner h3 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
-    font-size: 20px;
-    line-height: 1.9em;
-    width: 85%;
-    margin: 0 auto;
+    font-size: 26px;
+    line-height: 1.4em;
+    width: 75%;
+    margin: 0;
     color: #A8A8A8;
 }
 .banner hr {
     width: 60%;
-    margin: 18px auto 24px auto;
+    margin: 18px 0 24px 0;
     border-color: #2F2D2E;
     border-color: rgba(150, 150, 150, .1);
 }
 
 /* Social */
 ul.social {
-    margin: 24px 0;
+    margin: 0;
     padding: 0;
     font-size: 30px;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 ul.social li {
-    display: inline-block;
-    margin: 0 15px;
+    display: block;
+    margin: 20px 0;
     padding: 0;
+    text-align: center;
 }
 ul.social li a { color: #fff; }
 ul.social li a:hover { color: #11ABB0; }

@@ -5,7 +5,7 @@
 
 const resumeData = {
   "main": {
-    "name": "I am Yu Ju Chang",
+    "name": "I am Yu Ju Chang.",
     "occupation": "Cytogenetic Scientist, Full-Stack Developer",
     "description": "I am a cytogenetic scientist, Full-Stack Developer, and Cybersecurity Enthusiast. Passionate about making a difference with my work!",
     "image": "assets/images/profile.jpg",
