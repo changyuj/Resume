@@ -93,7 +93,7 @@ const resumeData = {
       {
         "title": "AML Survival Analysis using Machine Learning",
         "category": "This project investigates how biological age and lifestyle-driven risk factors influence the survival rates of patients with Acute Myeloid Leukemia (AML). By merging clinical data from cBioPortal (TCGA) with lifestyle proxies derived from NHANES, the model provides a holistic view of patient prognosis beyond traditional clinical markers",
-        "image": "assets/images/survival_comparison_plot.PNG",
+        "image": "assets/images/survival_comparison_plot.png",
         "url": "https://github.com/changyuj/AML_Survival_Analysis_using-Machine_Learning"
       },
       {
@@ -129,3 +129,4 @@ const resumeData = {
     ]
   }
 }
+
